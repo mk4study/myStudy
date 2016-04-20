@@ -1,0 +1,52 @@
+<h3 class="page-header">{{title}}</h3>
+<div class="content">
+    <div class="alert alert-danger" ng-show="myForm.$submitted && myForm.$invalid" ng-messages="myForm.keyword.$error">
+        <div ng-message="required">
+            検索条件を入力してください。</div>
+    </div>
+    <div class="alert alert-info" ng-show="myForm.$submitted && myForm.$valid && locations.length > 0 ">
+        <div>
+            {{locations.length}}件該当しました。</div>
+    </div>
+    <div class="alert alert-info" ng-show="myForm.$submitted && myForm.$valid && locations.length <= 0">
+        <div>
+            該当データが存在しません。</div>
+    </div>
+    <form name="myForm" ng-submit="onsubmit()" class="form-inline" novalidate>
+        <div class="form-group">
+            <input type="text" name="keyword" class="form-control" ng-model="keyword" ng-model-options="{updateOn: 'submit'}" required>
+            <button class="btn btn-primary" ng-click="search()">検索</button>
+        </div>
+    </form>
+    <div ng-show="locations.length > 0">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th ng-click="prefecture=!prefecture;sort('prefecture', prefecture)">都道府県名</th>
+                    <th ng-click="city=!city;sort('city', city)">市区町村名</th>
+                    <th ng-click="town=!town;sort('town', town)">町域名</th>
+                    <th ng-click="postal=!postal;sort('postal', postal)">郵便番号</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="location in locations | limitTo: len: start">
+                <tr>
+                    <td>{{location.prefecture}}</td>
+                    <td>{{location.city}}</td>
+                    <td>{{location.town}}</td>
+                    <td>{{location.postal}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-left">
+            <ul class="pagination">
+                <li><a ng-click="pagerPrev()">&lt;</a></li>
+            </ul>
+            <ul class="pagination" ng-repeat="page in pagination">
+                <li ng-class="{active: isActive(page.no)}"><a ng-click="pager(page.no)">{{page.no}}</a></li>
+            </ul>
+            <ul class="pagination">
+                <li><a ng-click="pagerNext()">&gt;</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<h3 class="page-header">{{title}}</h3>
+<div class="content">
+    <div>
+        <ul>
+            <li class="media">
+                <div class="clearfix">
+                    <staff-card></staff-card>
+<!-- ディレクティブ化
+                    <img class="media-object pull-left emp-pic" src="/assets/pics/{{staff.pic}}">
+                    <div class="media-body">
+                        {{ staff.firstName }} {{ staff.lastName }}
+                        <p>{{ staff.title }}</p>
+                    </div>
+-->
+                </div>
+            </li>
+            <li class="media">
+                <div class="clearfix">
+                    <a href="{{ staff.blog }}" class="push-right">
+                        <span class="media-object pull-left icon icon-book"></span>
+                    </a>
+                    <div class="media-body">
+                        Blog
+                        <p>{{ staff.blog }}</p>
+                    </div>
+                </div>
+            </li>
+            <li class="media">
+                <div class="clearfix">
+                    <span class="media-object pull-left icon icon-sms"></span>
+                    <div class="media-body">
+                        Twitter
+                        <p>{{ staff.twitterId }}</p>
+                    </div>
+                </div>
+            </li>
+            <li class="media">
+                <div class="clearfix">
+                    <a href="mailto:{{ staff.email }}" class="push-right">
+                        <span class="media-object pull-left icon icon-mail"></span>
+                    </a>
+                    <div class="media-body">
+                        Email
+                        <p>{{ staff.email }}</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

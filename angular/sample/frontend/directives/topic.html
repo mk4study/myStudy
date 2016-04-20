@@ -1,0 +1,14 @@
+<article class="panel panel-info">
+    <div class="panel-heading" ng-show="title">
+        <h1 class="panel-title">
+            {{title}}
+        </h1>
+    </div>
+    <div class="panel-body topic-body">
+        <div ng-transclude></div>
+<!--        <p style="white-space: pre-wrap;" ng-transclude></p>-->
+    </div>
+    <div class="panel-footer text-right" ng-show="date">
+        更新日:{{date}}
+    </div>
+</article>

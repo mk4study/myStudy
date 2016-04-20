@@ -1,0 +1,54 @@
+<!DOCTYPE Html>
+<html ng-app="main">
+
+<head>
+    <meta charset="utf-8" />
+    <title>SampleApp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <script src="/controllers/main.js"></script>
+    <script src="/controllers/contactUs.js"></script>
+    <script src="/controllers/staff.js"></script>
+    <script src="/controllers/staffDetail.js"></script>
+    <script src="/controllers/dashboard.js"></script>
+    <script src="/controllers/city.js"></script>
+    <script src="/controllers/article.js"></script>
+    <script src="/services/staffServices.js"></script>
+    <script src="/services/articleServices.js"></script>
+    <script src="/directives/staffCard.js"></script>
+    <script src="/directives/topic.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body ng-controller="mainController">
+    <header class="jumbotron jumbotron--sample text-center">
+        <h1><a ng-href="#/">{{title}}</a></h1>
+        <p>{{explain}}</p>
+    </header>
+    <navi class="container">
+        <div class="navbar navbar-inverse">
+            <div class="conainer-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">Home</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li ng-repeat="menu in menus"><a ng-href="#/{{menu.url}}">{{menu.title}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </navi>
+    <div class="container" ng-view></div>
+    <footer class="footer">
+		<div class="container">
+			<p class="text-muted text-right">Copyright (C) 2016 mk4study All Rights Reserved.</p>
+		</div>
+	</footer>
+</body>
+
+</html>

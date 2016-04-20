@@ -1,0 +1,26 @@
+<article>
+	<h3 class="page-header">{{article.title}}</h3>
+	<section class="panel panel-info" ng-repeat="content in article.contents">
+		<div class="panel-heading">
+			<h1 class="panel-title">
+				{{content.title}}
+			</h1>
+		</div>
+		<div class="panel-body">
+			<div ng-class="{'col-md-9' : content.pics, 'col-md-12' : !content.pics }" >
+				<p style="white-space: pre-wrap;">{{content.detail}}</p>
+				<p ng-show="content.href"><a href="{{content.href}}" target="_blank">{{content.href}}</a></p>
+			</div>
+			<div class="col-md-3 text-center" ng-show="content.pics">
+				<a data-toggle="modal" data-target=".modal-{{$index}}"><img src="{{content.pics}}" height="150"></a>
+			</div>
+		</div>
+		<div class="modal fade modal-{{$index}}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" ng-show="content.pics">
+			<div class="modal-dialog">
+				<div class="modal-content text-center">
+					<img src="{{content.pics}}" data-dismiss="modal">
+				</div>
+			</div>
+		</div>
+	</section>
+</article>

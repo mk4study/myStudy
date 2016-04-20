@@ -1,0 +1,78 @@
+body {
+	font-family: Arial, Roboto, "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+.media-object {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    margin-right: 15px;
+	background-color: #e3e8f6;
+}
+
+.icon-call {
+    background: transparent url(images/ic_action_phone_outgoing.png);
+    background-repeat: no-repeat;
+}
+
+.icon-sms {
+    background: transparent url(images/ic_action_dialog.png);
+    background-repeat: no-repeat;
+}
+
+.icon-mail {
+    background: transparent url(images/ic_action_mail.png);
+    background-repeat: no-repeat;
+}
+
+.icon-manager {
+    background: transparent url(images/ic_action_user.png);
+    background-repeat: no-repeat;
+}
+
+.icon-reports {
+    background: transparent url(images/ic_action_users.png);
+    background-repeat: no-repeat;
+}
+
+.icon-contact {
+    background: transparent url(images/ic_action_add.png);
+    background-repeat: no-repeat;
+}
+
+.icon-location {
+    background: transparent url(images/ic_action_location.png);
+    background-repeat: no-repeat;
+}
+.icon-book {
+    background: transparent url(images/ic_action_book.png);
+    background-repeat: no-repeat;
+}
+
+form.ng-submitted .ng-invalid
+{
+    background-color: lavenderBlush !important;
+    color: red;
+}
+
+form .ng-valid.ng-dirty {
+    background-color: azure !important;
+}
+
+.jumbotron--sample {
+    height: 200px;
+	background-color: #514690;
+	color: white;
+}
+
+.jumbotron--sample a {
+	color: white;
+}
+
+.topic-body {
+	height: 100px;
+}
+
+.modal-content img {
+	padding: 15px;
+}

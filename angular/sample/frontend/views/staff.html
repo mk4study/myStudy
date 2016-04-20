@@ -1,0 +1,19 @@
+<h3 class="page-header">{{title}}</h3>
+<div class="content">
+    <ul class="table-view" ng-repeat="staff in staffs">
+        <li class="media">
+            <a href="#staffDetail/{{ staff.id }}">
+                <staff-card></staff-card>
+<!-- ディレクティブ化
+                <div class="clearfix">
+                    <img class="media-object pull-left" src="/assets/pics/{{staff.pic}}">
+                    <div>
+                        {{staff.firstName}} {{staff.lastName}}
+                        <p>{{staff.title}}</p>
+                    </div>
+                </div>
+-->
+            </a>
+        </li>
+    </ul>
+</div>
