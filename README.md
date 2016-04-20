@@ -1,3 +1,8 @@
-# study
+# myStudy
 ## It is a repository for self-learning and technology research.
-### angular/cordova/typescript/react...
+#### theme
+  * angular1&2
+  * cordova
+  * typescript
+  * react
+  * etc...
